@@ -1,8 +1,7 @@
+export type InteractionMode = 'ask' | 'listen' | 'reply';
+
 export type RootStackParamList = {
   Home: undefined;
-  Chat: undefined;
-  ToolCalling: undefined;
-  SpeechToText: undefined;
-  TextToSpeech: undefined;
-  VoicePipeline: undefined;
+  Interaction: { mode: InteractionMode; scenario: string };
+  SavedNotes: undefined;
 };
