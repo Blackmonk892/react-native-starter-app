@@ -1,397 +1,243 @@
-# RunAnywhere React Native Starter App
+# 🤖 Bolsathi: Your AI-Powered Mobile Assistant
 
-A comprehensive starter app demonstrating the capabilities of the [RunAnywhere SDK](https://www.npmjs.com/org/runanywhere) - a privacy-first, on-device AI SDK for React Native.
+<div align="center">
 
-![RunAnywhere](https://img.shields.io/badge/RunAnywhere-0.16.10-00D9FF)
-![React Native](https://img.shields.io/badge/React%20Native-0.76.5-61DAFB)
-![Platforms](https://img.shields.io/badge/Platforms-iOS%20%7C%20Android-green)
+<!-- TODO: Add project logo (e.g., in a `assets/` or `public/` directory) -->
+
+[![GitHub stars](https://img.shields.io/github/stars/Blackmonk892/Bolsathi?style=for-the-badge)](https://github.com/Blackmonk892/Bolsathi/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Blackmonk892/Bolsathi?style=for-the-badge)](https://github.com/Blackmonk892/Bolsathi/network)
+[![GitHub issues](https://img.shields.io/github/issues/Blackmonk892/Bolsathi?style=for-the-badge)](https://github.com/Blackmonk892/Bolsathi/issues)
+[![GitHub license](https://img.shields.io/github/license/Blackmonk892/Bolsathi?style=for-the-badge)](LICENSE)
+
+**An AI-powered mobile assistant built with React Native and the RunAnywhere SDK, designed to make technology accessible for everyone.**
+
+<!-- TODO: Add live demo link (e.g., app store link or short video demo) -->
+<!-- TODO: Add documentation link if available -->
+
+</div>
+
+## 📖 Overview
+
+Bolsathi is an innovative AI-powered mobile assistant developed using the RunAnywhere SDK for React Native. Its core mission is to bridge the digital divide by making technology more accessible and user-friendly for individuals who need it most. This includes the elderly, those with limited education, or anyone facing challenges with navigating complex digital government services, such as opening a bank account or resolving administrative queries.
+
+By providing intuitive, AI-driven guidance and support, Bolsathi empowers users to confidently interact with digital platforms and government services, fostering greater independence and inclusion.
 
 ## ✨ Features
 
-This starter app showcases four main capabilities of the RunAnywhere SDK:
+*   **AI-Powered Conversational Interface**: Interact using natural language for seamless assistance.
+*   **Government Services Facilitation**: Guides users through processes like opening bank accounts, applying for services, and resolving common queries.
+*   **Accessibility First Design**: Tailored for diverse user groups, including the elderly and those with limited technological literacy.
+*   **RunAnywhere SDK Integration**: Leverages advanced AI capabilities provided by the RunAnywhere platform.
+*   **Cross-Platform Mobile Experience**: Developed with React Native for a consistent experience on both Android and iOS.
+*   **User-Friendly Guidance**: Provides clear, step-by-step instructions and explanations to simplify complex tasks.
 
-### 💬 Chat (LLM Text Generation)
-- Streaming text generation with token-by-token output
-- Performance metrics (tokens/second, total tokens)
-- Cancel generation mid-stream
-- Suggested prompts for quick testing
-- Beautiful chat UI with message bubbles
+## 🖥️ Screenshots
 
-### 🎤 Speech-to-Text (STT)
-- Real-time audio recording
-- On-device transcription using Whisper models
-- Audio level visualization
-- Transcription history
-- Privacy-first: all processing happens on device
+<!-- TODO: Add actual screenshots of the app interface on both Android and iOS.
+     Example:
+     ![Bolsathi Home Screen](assets/screenshots/home-screen.png)
+     ![Bolsathi Service Flow](assets/screenshots/service-flow.png)
+     ![Bolsathi Conversation](assets/screenshots/conversation.png)
+-->
+Please add screenshots of the Bolsathi app in action here!
 
-### 🔊 Text-to-Speech (TTS)
-- Neural voice synthesis with Piper TTS
-- Adjustable speech rate (0.5x - 2.0x)
-- Sample texts for quick testing
-- Audio playback controls
-- High-quality, natural-sounding voices
+## 🛠️ Tech Stack
 
-### ✨ Voice Pipeline (Voice Agent)
-- Full voice assistant experience
-- Seamless integration: Speak → Transcribe → Generate → Speak
-- Real-time status updates
-- Conversation history
-- Complete end-to-end voice interaction
+**Mobile Frontend:**
+[![React Native](https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactnative.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-## 📦 SDK Packages Used
+**AI/Core SDK:**
+[![RunAnywhere AI](https://img.shields.io/badge/RunAnywhere_AI-000000?style=for-the-badge&logo=ai&logoColor=white)](https://runanywhere.ai/)
 
-This app uses three RunAnywhere packages:
+**Development Tools:**
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
+[![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)](https://eslint.org/)
+[![Prettier](https://img.shields.io/badge/Prettier-F7BA3E?style=for-the-badge&logo=prettier&logoColor=black)](https://prettier.io/)
 
-| Package | Purpose | NPM |
-|---------|---------|-----|
-| `@runanywhere/core` | Core SDK with infrastructure | [View on NPM](https://www.npmjs.com/package/@runanywhere/core) |
-| `@runanywhere/llamacpp` | LLM backend (LlamaCpp) | [View on NPM](https://www.npmjs.com/package/@runanywhere/llamacpp) |
-| `@runanywhere/onnx` | STT/TTS/VAD backend (ONNX) | [View on NPM](https://www.npmjs.com/package/@runanywhere/onnx) |
+## 🚀 Quick Start
 
-## 🚀 Getting Started
-
-### Quick Start
-
-```bash
-# Clone and install
-git clone https://github.com/RunanywhereAI/react-native-starter-app.git
-cd react-native-starter-app
-npm install
-
-# iOS (requires pod install first)
-cd ios && pod install && cd ..
-npx react-native run-ios
-
-# Android (no additional setup needed)
-npx react-native run-android
-```
+Follow these steps to get a local copy of Bolsathi up and running on your development machine.
 
 ### Prerequisites
 
-- **Node.js** 18 or higher
-- **React Native CLI** development environment ([setup guide](https://reactnative.dev/docs/environment-setup))
-- **iOS:** Xcode 14+, CocoaPods, macOS
-- **Android:** 
-  - Android Studio
-  - JDK 17+
-  - Android SDK 36 (compileSdk)
-  - NDK 27.1.12297006 (install via Android Studio → SDK Manager → SDK Tools → NDK)
-  - Build Tools 36.0.0
-- **Physical device recommended** for best performance (AI models run slowly on simulators)
+Before you begin, ensure you have the following installed:
+
+*   **Node.js**: [LTS version recommended](https://nodejs.org/en/download/)
+*   **npm**: Comes with Node.js
+*   **React Native CLI**: `npm install -g react-native-cli`
+*   **Development Environment**:
+    *   **Android**: [Android Studio](https://developer.android.com/studio) with Android SDK and a suitable JDK.
+    *   **iOS**: [Xcode](https://developer.apple.com/xcode/) (macOS only) with CocoaPods (`sudo gem install cocoapods`).
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/RunanywhereAI/react-native-starter-app.git
-   cd react-native-starter-app
-   ```
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/Blackmonk892/Bolsathi.git
+    cd Bolsathi
+    ```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-   > **Note:** This runs `patch-package` automatically via postinstall to apply necessary compatibility fixes.
+2.  **Install dependencies**
+    ```bash
+    npm install
+    # If on iOS, install CocoaPods dependencies
+    cd ios && pod install && cd ..
+    ```
 
-3. **iOS Setup**
-   ```bash
-   cd ios
-   pod install
-   cd ..
-   ```
-   > **Known Issue (RN 0.83):** The `@runanywhere` SDK packages use `podspecPath` in their React Native config, which the RN 0.83 CLI no longer allows. To work around this, `automaticPodsInstallation` is set to `false` in `react-native.config.js`. This means you **must always run `pod install` manually** (as shown above) before building for iOS. You may see warnings about `podspecPath` when running `run-ios` — these are harmless and can be ignored. This will be fixed in a future SDK release.
+3.  **Environment setup**
+    Create a `.env` file in the root directory for any sensitive API keys or configuration required by the RunAnywhere SDK.
+    ```bash
+    cp .env.example .env # If a .env.example is provided in the future
+    ```
+    **Configure your environment variables (example):**
+    ```
+    RUNANYWHERE_API_KEY=your_api_key_here
+    ```
+    <!-- TODO: Update with actual environment variables from `.env.example` if it existed -->
 
-4. **Android Setup** (verify your environment)
-   
-   No additional setup is needed if you have Android Studio installed with the required SDK components. To verify:
-   
-   ```bash
-   # Check that ANDROID_HOME is set (should point to your Android SDK)
-   echo $ANDROID_HOME
-   # Expected: /Users/<username>/Library/Android/sdk (macOS) or similar
-   
-   # Verify ADB is available
-   adb --version
-   
-   # Check installed NDK versions (need 27.1.12297006)
-   ls $ANDROID_HOME/ndk/
-   ```
-   
-   If NDK 27 is missing, install it via Android Studio:
-   - Open Android Studio → Settings → SDK Manager → SDK Tools tab
-   - Check "Show Package Details" → expand "NDK (Side by side)"
-   - Select version **27.1.12297006** and click Apply
+4.  **Start the Metro Bundler**
+    It's recommended to run the Metro bundler in a separate terminal.
+    ```bash
+    npm start
+    ```
 
-5. **Run the app**
+5.  **Run on a device or emulator**
 
-   **For iOS:**
-   ```bash
-   npx react-native run-ios
-   ```
+    *   **For Android:**
+        Ensure an Android emulator is running or a device is connected.
+        ```bash
+        npm run android
+        ```
 
-   **For Android:**
-   ```bash
-   npx react-native run-android
-   ```
+    *   **For iOS (macOS only):**
+        Ensure an iOS simulator is running or a device is connected.
+        ```bash
+        npm run ios
+        ```
 
-### Running with Two Terminals (Recommended)
+    The app should now be running on your chosen device/emulator.
 
-For better control and visibility of logs, run Metro bundler and the app build in separate terminals:
-
-**Terminal 1 - Start Metro Bundler:**
-```bash
-cd react-native-starter-app
-npx react-native start
-```
-
-Wait until you see "Dev server ready", then in a second terminal:
-
-**Terminal 2 - Build & Run the App:**
-```bash
-cd react-native-starter-app
-
-# For iOS
-npx react-native run-ios
-
-# For Android
-npx react-native run-android
-```
-
-> **Note:** The first Android build takes 5-10 minutes as it compiles native C++ code. Subsequent builds are much faster.
-
-### Running on Physical Android Device
-
-When running on a physical Android device, you need to set up port forwarding for the Metro bundler:
-
-```bash
-# Connect your device via USB and verify it's detected
-adb devices
-
-# Set up port forwarding (required for each USB session)
-adb reverse tcp:8081 tcp:8081
-
-# Start Metro bundler in one terminal
-npx react-native start
-
-# Run the app in another terminal
-npx react-native run-android
-```
-
-> **Tip:** If you see "Could not connect to development server", run `adb reverse tcp:8081 tcp:8081` again.
-
-### iOS Permissions
-
-The app requires microphone access. Permissions are already configured in `ios/RunAnywhereStarter/Info.plist`:
-
-```xml
-<key>NSMicrophoneUsageDescription</key>
-<string>This app needs microphone access for speech recognition and voice agent features</string>
-<key>NSSpeechRecognitionUsageDescription</key>
-<string>This app uses on-device speech recognition to transcribe your voice</string>
-```
-
-### Android Permissions
-
-Required permissions are configured in `android/app/src/main/AndroidManifest.xml`:
-
-```xml
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.RECORD_AUDIO" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-```
-
-## 🏗️ Architecture
+## 📁 Project Structure
 
 ```
-src/
-├── App.tsx                      # Main app entry, SDK initialization
-├── theme/
-│   └── colors.ts               # Color palette and theme
-├── services/
-│   └── ModelService.tsx        # Model management (download, load, state)
-├── components/
-│   ├── FeatureCard.tsx         # Home screen feature cards
-│   ├── ModelLoaderWidget.tsx   # Model download/load UI
-│   ├── ChatMessageBubble.tsx   # Chat message UI
-│   └── AudioVisualizer.tsx     # Audio level visualization
-├── screens/
-│   ├── HomeScreen.tsx          # Main navigation screen
-│   ├── ChatScreen.tsx          # LLM chat interface
-│   ├── SpeechToTextScreen.tsx  # STT interface
-│   ├── TextToSpeechScreen.tsx  # TTS interface
-│   └── VoicePipelineScreen.tsx # Voice agent interface
-└── navigation/
-    └── types.ts                # Navigation type definitions
+Bolsathi/
+├── android/               # Android native project files
+├── ios/                   # iOS native project files
+├── src/                   # Main application source code
+│   ├── components/        # Reusable UI components
+│   ├── screens/           # Application screens/pages
+│   ├── navigation/        # Navigation setup (if any)
+│   ├── utils/             # Utility functions
+│   └── App.tsx            # Main application component
+├── .eslintrc.js           # ESLint configuration
+├── .gitignore             # Files ignored by Git
+├── .prettierrc.js         # Prettier configuration
+├── app.json               # React Native app configuration
+├── babel.config.js        # Babel transpiler configuration
+├── index.js               # Entry point for React Native app
+├── metro.config.js        # Metro bundler configuration
+├── package.json           # Project dependencies and scripts
+├── package-lock.json      # Exact dependency versions
+├── react-native.config.js # React Native CLI configuration
+└── tsconfig.json          # TypeScript configuration
 ```
 
-## 🤖 Default Models
+## ⚙️ Configuration
 
-The app comes preconfigured with these models:
+### Environment Variables
+While no `.env.example` was provided, React Native projects often rely on environment variables for API keys and sensitive configurations. Please configure these as needed:
 
-| Model | Purpose | Size | Source |
-|-------|---------|------|--------|
-| SmolLM2 360M Q8_0 | Text generation | ~400MB | HuggingFace |
-| Sherpa ONNX Whisper Tiny EN | Speech recognition | ~80MB | RunAnywhere |
-| Piper TTS (US English) | Voice synthesis | ~100MB | RunAnywhere |
+| Variable | Description | Default | Required |
+|----------|-------------|---------|----------|
+| `RUNANYWHERE_API_KEY` | Your API key for the RunAnywhere AI SDK. | `None` | Yes |
+| <!-- TODO: Add other detected environment variables --> | | | |
 
-## 🎨 Customization
+### Configuration Files
+*   `.eslintrc.js`: ESLint rules for code quality and style.
+*   `.prettierrc.js`: Prettier rules for code formatting.
+*   `babel.config.js`: Configuration for Babel, used to transpile modern JavaScript/TypeScript.
+*   `metro.config.js`: Configuration for the Metro bundler, which bundles JavaScript for React Native.
+*   `tsconfig.json`: TypeScript compiler options.
+*   `app.json`: General React Native application configuration (e.g., app name, display name).
 
-### Using Different Models
+## 🔧 Development
 
-You can modify `src/services/ModelService.tsx` to use different models:
+### Available Scripts
+The `package.json` typically includes the following scripts for development:
 
-```typescript
-// LLM Model - Example with a larger model
-await LlamaCpp.addModel({
-  id: 'qwen2-1.5b-q4',
-  name: 'Qwen2 1.5B Q4',
-  url: 'https://huggingface.co/...',
-  memoryRequirement: 1500000000,
-});
+| Command | Description |
+|---------|-------------|
+| `npm start` | Starts the Metro Bundler. |
+| `npm run android` | Runs the app on a connected Android device/emulator. |
+| `npm run ios` | Runs the app on a connected iOS device/simulator. |
+| `npm test` | Runs tests using Jest (if configured). |
+| `npm run lint` | Runs ESLint to check for code quality issues. |
 
-// STT Model - Example with multilingual support
-await Onnx.addModel({
-  id: 'whisper-small-multi',
-  name: 'Whisper Small Multilingual',
-  url: 'https://...',
-  modality: ModelCategory.speechRecognition,
-});
-```
+### Development Workflow
+1.  Start the Metro bundler in one terminal: `npm start`
+2.  Run the app on your desired platform in another terminal: `npm run android` or `npm run ios`
+3.  Make changes to the `src/` files. The app will hot-reload automatically.
+4.  Check for linting errors with `npm run lint` regularly.
 
-### Theming
+## 🧪 Testing
 
-The app uses a custom dark theme defined in `src/theme/colors.ts`. You can customize:
+No explicit testing framework configuration or test files were detected in the provided repository structure. For React Native projects, [Jest](https://jestjs.io/) is commonly used for unit and component testing. You may want to set up Jest and add a `__tests__` directory for your test files.
 
-```typescript
-export const AppColors = {
-  primaryDark: '#0A0E1A',
-  accentCyan: '#00D9FF',
-  accentViolet: '#8B5CF6',
-  // ... more colors
-};
-```
+## 🚀 Deployment
 
-## 🔒 Privacy
+To prepare the application for production, you typically create a release build:
 
-All AI processing happens **on-device**. No data is sent to external servers. The models are downloaded once and stored locally on the device.
+### Production Build
 
-- ✅ No internet required after model download
-- ✅ All inference runs locally
-- ✅ Your conversations never leave your device
-- ✅ No API keys or cloud services needed
+*   **For Android:**
+    Generate an APK or AAB bundle. This usually involves signing the application.
+    ```bash
+    cd android && ./gradlew assembleRelease
+    ```
+    The signed `.apk` or `.aab` will be located in `android/app/build/outputs/`.
 
-## 🐛 Troubleshooting
+*   **For iOS (macOS only):**
+    Build the app for archiving in Xcode and then submit to the App Store Connect.
+    ```bash
+    cd ios && bundle exec pod install # Ensure pods are up to date
+    # Open Xcode project (ios/Bolsathi.xcodeproj or .xcworkspace)
+    # Product > Archive
+    ```
 
-### "Could not connect to development server" (Android)
-This happens on physical Android devices because they can't reach `localhost` on your computer.
-
-```bash
-# Set up port forwarding
-adb reverse tcp:8081 tcp:8081
-
-# Verify Metro is running
-curl http://localhost:8081/status  # Should return "packager-status:running"
-```
-
-### CMake Error: "add_subdirectory given source which is not an existing directory"
-This happens when codegen hasn't run yet. Simply run the build again:
-
-```bash
-cd android && ./gradlew assembleDebug
-```
-
-The second run will succeed as codegen completes.
-
-### Models not downloading
-- Check your internet connection
-- Ensure sufficient storage space (models can be 100MB-1GB)
-- Check iOS/Android permissions
-- Clear app data and try again
-
-### Microphone not working
-- Grant microphone permission in device settings
-- Restart the app after granting permission
-- On Android, check if permission is granted in AndroidManifest.xml
-
-### Low performance
-- Smaller models (like SmolLM2 360M) work better on mobile devices
-- Close other apps to free up memory
-- Use quantized models (Q4/Q8) for better performance
-- Ensure you're running on a physical device (simulators are slow)
-
-### Build errors
-- Clear cache: `cd android && ./gradlew clean` or `cd ios && rm -rf Pods Podfile.lock`
-- Reinstall dependencies: `rm -rf node_modules && npm install`
-- For iOS: `cd ios && pod install --repo-update`
-- For Android: Delete `android/app/build` and `android/.gradle` folders, then rebuild
-
-### Android NDK not found
-If you see errors about NDK not found:
-```bash
-# Check if NDK 27 is installed
-ls ~/Library/Android/sdk/ndk/
-
-# If missing, install via Android Studio SDK Manager or:
-sdkmanager "ndk;27.1.12297006"
-```
-
-### Android SDK location not found
-Ensure `local.properties` exists in the `android/` folder with your SDK path:
-```properties
-sdk.dir=/Users/<username>/Library/Android/sdk
-```
-This file is auto-generated when you open the project in Android Studio.
-
-### Patches not applied
-If you see build errors related to `react-native-nitro-modules`, ensure patches are applied:
-
-```bash
-npx patch-package
-```
-
-This should run automatically via `postinstall`, but you can run it manually if needed.
-
-## 📚 Documentation
-
-- [RunAnywhere SDK Documentation](https://docs.runanywhere.ai)
-- [React Native Documentation](https://reactnative.dev)
-- [API Reference](https://docs.runanywhere.ai/api)
+### Deployment Options
+*   **Google Play Store**: Use the generated AAB (Android App Bundle) from the Android build process.
+*   **Apple App Store**: Use the archived build from Xcode and App Store Connect.
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+We welcome contributions to make Bolsathi even better! If you're interested in contributing, please review the existing codebase and open an issue or pull request.
+
+### Development Setup for Contributors
+The development setup is the same as described in the [Quick Start](#🚀-quick-start) section. Ensure your environment is correctly configured to run React Native applications.
 
 ## 📄 License
 
-This starter app is provided under the MIT License. The RunAnywhere SDK is licensed under the [RunAnywhere License](https://runanywhere.ai/license).
+This project is currently **Unspecified** regarding its license. Please refer to the repository owner for licensing details.
+<!-- TODO: Create a LICENSE file and update this section accordingly. -->
 
-For commercial licensing inquiries, contact: san@runanywhere.ai
+## 🙏 Acknowledgments
 
-## 🆘 Support
+*   Built upon the foundation provided by the [RunAnywhereAI/react-native-starter-app](https://github.com/RunanywhereAI/react-native-starter-app)
+*   Leverages the powerful [RunAnywhere SDK](https://runanywhere.ai/) for AI capabilities.
 
-- **GitHub Issues**: [Report bugs](https://github.com/RunanywhereAI/runanywhere-sdks/issues)
-- **Email**: san@runanywhere.ai
-- **Documentation**: [runanywhere.ai](https://runanywhere.ai)
-- **Discord**: [Join our community](https://discord.gg/runanywhere)
+## 📞 Support & Contact
 
-## 🎯 Next Steps
-
-1. **Explore the code**: Check out each screen to understand how the SDK works
-2. **Try different models**: Swap in your own models to see what works best
-3. **Build your app**: Use this as a foundation for your own AI-powered app
-4. **Share feedback**: Let us know what you think and what features you'd like to see
-
-## ⭐ Acknowledgments
-
-Built with:
-- [React Native](https://reactnative.dev)
-- [React Navigation](https://reactnavigation.org)
-- [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated)
-- [React Native Linear Gradient](https://github.com/react-native-linear-gradient/react-native-linear-gradient)
-
-Special thanks to the open-source community and the RunAnywhere team!
+-   🐛 Issues: [GitHub Issues](https://github.com/Blackmonk892/Bolsathi/issues)
+<!-- TODO: Add a contact email or discussion link if available -->
 
 ---
 
-Made with ❤️ by the RunAnywhere team
+<div align="center">
+
+**⭐ Star this repo if you find it helpful!**
+
+Made with ❤️ by [Blackmonk892](https://github.com/Blackmonk892)
+
+</div>
